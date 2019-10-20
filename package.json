@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/besteman/peterson_v2/issues"
   },
-  "homepage": "https://github.com/besteman/peterson_v2#readme"
+  "homepage": "https://github.com/besteman/peterson_v2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
