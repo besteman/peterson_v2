@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jordan Peterson Quotes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+    <script src="quotes_array.js"></script>
+</head>
+
+<style>
+    body {
+        background-color: #D3D3D3;
+    }
+
+    #quote-box {
+        width: 120px;
+        height: 200%;
+        background-color: #F5F5F5;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: 'Vidaloka', serif;
+    }
+
+    .block-quote {
+        margin: 10px;
+    }
+
+    .temp {
+        margin: auto;
+        font-weight: bolder;
+    }
+
+    .header {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center header">
+                <h1>Jordan Peterson Quote A Day</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center h-100">
+            <div class="col-4 text-center" id="quote-box">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let counter = 1;
+
+        window.setInterval(function () { // Set interval for checking
+            counter++;
+
+            let date = new Date(); // Create a Date object to find out what time it is
+
+            // Check the time
+            if (date.getHours() === 17 && date.getMinutes() === 0) {
+                let quoteP = $("<blockquote>")
+                    .text(quotes[counter])
+                    .addClass("block-quote");
+
+                $("#quote-box").html(quoteP)
+            }
+        }, 60000);
+        let quoteP = $("<blockquote>")
+            .text(quotes[0])
+            .addClass("block-quote");
+
+        $("#quote-box").html(quoteP)
+    </script>
+</body>
+
+</html>
