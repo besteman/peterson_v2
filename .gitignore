@@ -1,3 +1,6 @@
+.DS_Store
+__sandbox.js
+
 # Logs
 logs
 *.log
