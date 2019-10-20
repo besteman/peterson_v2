@@ -12,7 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
     </script>
-    <script src="quotes_array.js"></script>
 </head>
 
 <style>
@@ -60,27 +59,40 @@
     </div>
 
     <script>
-        let counter = 1;
+        // let counter = 1;
 
-        window.setInterval(function () { // Set interval for checking
-            counter++;
+        // window.setInterval(function () { // Set interval for checking
+        //     counter++;
 
-            let date = new Date(); // Create a Date object to find out what time it is
+        //     let date = new Date(); // Create a Date object to find out what time it is
 
-            // Check the time
-            if (date.getHours() === 17 && date.getMinutes() === 0) {
+        //     // Check the time
+        //     if (date.getHours() === 17 && date.getMinutes() === 0) {
+        //         let quoteP = $("<blockquote>")
+        //             .text(quotes[counter])
+        //             .addClass("block-quote");
+
+        //         $("#quote-box").html(quoteP)
+        //     }
+        // }, 60000);
+        // let quoteP = $("<blockquote>")
+        //     .text(quotes[0])
+        //     .addClass("block-quote");
+
+        // $("#quote-box").html(quoteP)
+
+        (foo = () => {
+            $.ajax({
+                url: "/api/quotes_data",
+                method: "GET"
+            }).then((response) => {
                 let quoteP = $("<blockquote>")
-                    .text(quotes[counter])
+                    .text(response[0])
                     .addClass("block-quote");
 
-                $("#quote-box").html(quoteP)
-            }
-        }, 60000);
-        let quoteP = $("<blockquote>")
-            .text(quotes[0])
-            .addClass("block-quote");
-
-        $("#quote-box").html(quoteP)
+                    $("#quote-box").html(quoteP)
+            })
+        })()
     </script>
 </body>
 
