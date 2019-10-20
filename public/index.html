@@ -87,7 +87,7 @@
                 method: "GET"
             }).then((response) => {
                 let quoteP = $("<blockquote>")
-                    .text(response[0])
+                    .text(response)
                     .addClass("block-quote");
 
                     $("#quote-box").html(quoteP)
