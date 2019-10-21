@@ -28,7 +28,7 @@ body {
   display: table;
 }
 
-#footer-text {
+.footer-text {
   display: table-cell;
   vertical-align: middle;
 }
