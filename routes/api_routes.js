@@ -1,9 +1,10 @@
-const cron = require('node-cron');
+import { schedule } from 'node-cron';
+
 const quotesData = require('../data/quotes_array');
 
 let numberOfQuote = 0;
 
-cron.schedule('* * * * *', () => {
+schedule('* * * * *', () => {
   // eslint-disable-next-line no-console
   console.log('running a task every minute');
   numberOfQuote += 1;
