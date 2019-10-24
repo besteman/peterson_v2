@@ -2,4 +2,15 @@
   background-color: #F5F5F5;
   padding: 30px;
   line-height: 2em;
+  font-size: 18px;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+
+}
+
+#quote {
+  font-size: 20px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.84)
 }
