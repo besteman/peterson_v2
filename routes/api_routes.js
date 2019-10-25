@@ -4,10 +4,12 @@ const quotesData = require('../data/quotes_array');
 
 let numberOfQuote = 0;
 
-schedule('* * * * *', () => {
+schedule('0 8 * * *', () => {
   // eslint-disable-next-line no-console
   console.log('running a task every minute');
   numberOfQuote += 1;
+}, {
+  timezone: 'America/New_York',
 });
 
 module.exports = (app) => {
