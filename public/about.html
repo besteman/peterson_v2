@@ -16,35 +16,102 @@
   <link rel="stylesheet" href="/assets/css/global.css" type="text/css" />
   <link rel="stylesheet" href="/assets/css/about.css" type="text/css" />
   <link rel="stylesheet" href="/assets/css/funding.css" type="text/css" />
-
   <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Home</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
-    </div>
-    <form class="form-inline">
-      <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#000000 !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 0px 9px !important;font-size: 17px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button mr-sm-2" target="_blank" href="https://www.buymeacoffee.com/Ly4u3d7"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+      <span class="navbar-text">
+        <style>
+          .bmc-button img {
+            width: 27px !important;
+            margin-bottom: 1px !important;
+            box-shadow: none !important;
+            border: none !important;
+            vertical-align: middle !important;
+          }
 
+          .bmc-button {
+            line-height: 36px !important;
+            height: 37px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            color: #ffffff !important;
+            background-color: #000000 !important;
+            border-radius: 3px !important;
+            border: 1px solid transparent !important;
+            padding: 0px 9px !important;
+            font-size: 17px !important;
+            letter-spacing: -0.08px !important;
+            box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            margin: 0 auto !important;
+            font-family: 'Lato', sans-serif !important;
+            -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+            -o-transition: 0.3s all linear !important;
+            -webkit-transition: 0.3s all linear !important;
+            -moz-transition: 0.3s all linear !important;
+            -ms-transition: 0.3s all linear !important;
+            transition: 0.3s all linear !important;
+          }
 
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_donations" />
-        <input type="hidden" name="business" value="X5P7VVE4T7N2G" />
-        <input type="hidden" name="currency_code" value="USD" />
-        <input class="ml-sm-3" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          .bmc-button:hover,
+          .bmc-button:active,
+          .bmc-button:focus {
+            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            text-decoration: none !important;
+            box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+            opacity: 0.85 !important;
+            color: #ffffff !important;
+          }
+
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+          rel="stylesheet"><a class="bmc-button" target="_blank"
+          href="https://www.buymeacoffee.com/Ly4u3d7"><img
+            src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
+            alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+      </span>
+      <span>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_donations" />
+          <input type="hidden" name="business" value="X5P7VVE4T7N2G" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input class="ml-sm-3" type="image"
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0"
+            name="submit" title="PayPal - The safer, easier way to pay online!"
+            alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
+            height="1" />
         </form>
-    </form>
+      </span>
+    </div>
   </nav>
 
   <div class="container">
@@ -55,15 +122,25 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-sm-8 about">
-          <p>I wanted to create something that would provide people with a quote from Jordan Peterson per day. The reason was so that it would allow for a means for self-reflection and conversation.  As I was building this, a quote appeared while I was testing. It said,</p>
+        <p>I wanted to create something that would provide people with a quote from Jordan Peterson
+          per day. The reason was so that it would allow for a means for self-reflection and
+          conversation. As I was building this, a quote appeared while I was testing. It said,</p>
 
-          <blockquote class="text-center" id="quote"> <i>"When you have something to say, silence is a lie."</i></blockquote>
+        <blockquote class="text-center" id="quote"> <i>"When you have something to say, silence is a
+            lie."</i></blockquote>
 
-          <p> When I read that, it caused me to stop and take a scalpel to myself. I realized that I had things to say that I wasn't saying. Things that I should have said in my friendships, my marriage, and my work. I did not speak up, and I reasoned that it was better to keep quiet to stay safe and keep the peace. I was lying to myself and others. I was a coward.</p>
+        <p> When I read that, it caused me to stop and take a scalpel to myself. I realized that I
+          had things to say that I wasn't saying. Things that I should have said in my friendships,
+          my marriage, and my work. I did not speak up, and I reasoned that it was better to keep
+          quiet to stay safe and keep the peace. I was lying to myself and others. I was a coward.
+        </p>
 
-          <p>At the end of the self-reflection, I knew why I was building this. I was making this so that people can have a chance to read a thought-provoking quote and use it as a springboard to help approve their lives.</p>
+        <p>At the end of the self-reflection, I knew why I was building this. I was making this so
+          that people can have a chance to read a thought-provoking quote and use it as a
+          springboard to help approve their lives.</p>
 
-          <p>I would like to make this site an ongoing project and add more features. Please considering supporting this project by using the links on the top right!</p>
+        <p>I would like to make this site an ongoing project and add more features. Please
+          considering supporting this project by using the links on the top right!</p>
 
       </div>
     </div>
