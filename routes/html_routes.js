@@ -1,11 +1,13 @@
-import { join } from 'path';
+// import { join } from 'path';
 
 module.exports = (app) => {
   app.get('/about', (req, res) => {
-    res.sendFile(join(__dirname, '../public/about.html'));
+    res.render('about');
+    // res.sendFile(join(__dirname, '../public/about.html'));
   });
 
   app.get('*', (req, res) => {
-    res.sendFile(join(__dirname, '../public/index.html'));
+    res.render('quote');
+    // res.sendFile(join(__dirname, '../public/index.html'));
   });
 };
